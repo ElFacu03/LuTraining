@@ -15,7 +15,35 @@ body{
 
 }
 
-header ul{
+.cuadro{
+    background-color: rgb(172, 10, 10);
+    width: auto;
+    height: auto;
+    aspect-ratio: 1/1;
+}
+.navbar{
+    background-color: black;
+ }
+.nav-link{
+    color: white;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+    color: gray;
+}
+
+.nav-link:focus, .nav-link:hover{
+    color: gray;
+
+}
+.navbar-toggler-icon{
+    background-image: url("../imagenes/menu.png") ;
+}
+
+
+ header ul{
+    display: flex;
+    align-items: center;
     margin-right: 50px;  
     padding: 0;
     color: whitesmoke ;
@@ -24,7 +52,7 @@ header ul{
     
 }
 
-a {
+.navegacionTop a {
     color: white;
     text-decoration: none;
     padding: 10px;   
@@ -45,42 +73,75 @@ header{
 
 }
 
+/* .mainPlanes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+    
+} */
+
 main {   
+    display: flex;        
     width: 100%;        
     grid-area: main;
     background-image: url("../imagenes/fondoMain.jpg");
 }
 
 footer{
+    padding-left:  10px;
     width: 100%;
     color: white;
     background-color: black;
     grid-area: footer;
 
 }
-
-
-
-.formulario{
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    background-color: blanchedalmond;
-    width: 300px;
-    height: 400px;
+.contenidoFormulario{
+    background-color: rgb(201, 223, 5);
+    width: 250px;
+    height: 480px;    
+    padding: 20px;
+    
 }
+.tituloForm {
+    
+    list-style-type: none;
+    font-family: "Open Sans";
+    padding: 10px;
+
+}
+
+
+.formulario{ 
+    flex-direction: row;   
+    align-items: center;
+    padding: 10px;
+    
+}
+
 
 .campoForm{
     margin: 5px;
+    
+}
+.sectionInicio{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    
+    
 }
 
-
-
 .titulillo{
-    margin-top: 200px;
-    margin-left: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:yellow;                
     font-family: "Rowdies";
     font-size: 30px;
+    
 }
 
 li {
@@ -94,21 +155,28 @@ li {
 
 }
 
+@media (max-width: 480px){
+    .redesMini{
+        width: 30px;
+        height: 30px;
+    }
+}
+
 footer p{
     display:inline ;
 }
+
 footer{
     display: flex;
     justify-content: space-between;
 }
 
 .tarjetas{
-    margin-top: 300px;
-    margin-left: 50px;
-    display: inline-block;
-    background-color: greenyellow;
-    width: 300px;
-    height: 200px;
+    padding: 10px;
+    margin-top: 200px; 
+    margin-left: 20px;
+    background-color: lightgrey;    
+    height: 350px;
 }
 
 .grupoMuscular{
@@ -116,7 +184,11 @@ footer{
     padding-left: 25px;
     width: 250px;
 }
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
 
+}
 .fotoVideo{
     margin: 50px;
     display: inline-block;
@@ -127,17 +199,47 @@ footer{
     border-style: dashed;
 }
 
+.sectionPlanes{
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
 .plan{   
-    margin-top: 200px;
-    margin-left: 200px;
+    padding: 10px;
     display: inline-block; 
     font-family: "Open Sans";
     width: 400px;
     height: 500px;
-    background-color: blanchedalmond;
+    background-color: rgb(214, 214, 30);
 
-}
+}    
+      
 
-.planes{
-    display: inline;
+
+.logoContacto {
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: end;    
+    
 }
+.whatsapp{ 
+    
+    position: sticky;
+    bottom: 50px; 
+    width: 75px;
+    height:75px;
+}
+@media (max-width: 480px) {
+    .whatsapp{
+        width: 50;
+        height: 50;
+    }
+}   
+    
+    
+
